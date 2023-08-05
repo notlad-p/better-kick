@@ -1,0 +1,6 @@
+/* TODO: set up vite / rollup to compile this into a single css file */
+
+/* Split chat messages: Alternate background colors */
+div[data-chat-entry]:nth-of-type(odd) {
+  background-color: #000;
+}

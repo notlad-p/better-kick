@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Better Kick",
+  "version": "0.1",
+  "description": "Adds features to kick.com",
+  "permissions": ["storage", "webNavigation", "tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.kick.com/*"],
+      "js": ["content.js"],
+      "css": ["index.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*.kick.com/*"],
+      "resources": ["modules.js"],
+      "use_dynamic_url": true
+    }
+  ]
+}
