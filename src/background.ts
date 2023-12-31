@@ -41,3 +41,8 @@ tabs.onUpdated.addListener((_tabId, changeInfo, _tab) => {
     }
   }
 });
+
+
+browser.permissions.onAdded.addListener((permissions) => {
+  console.log("Permissions changed", permissions);
+})
